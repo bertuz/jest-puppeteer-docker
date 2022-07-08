@@ -6,7 +6,7 @@
     "scripts": {
         "test": "npm run unit && npm run e2e",
         "unit": "jest -c src/tests/jest.config.js",
-        "e2e": "cross-env process.env.JEST_PUPPETEER_CONFIG=example/jest-puppeteer.config.js process.env.DOCKER_CHROMIUM_USE_IMAGE=bertuz/docker-chromium:chromium103.0.5060.53 jest panel.test.js -c example/jest.config.js",
+        "e2e": "cross-env process.env.DOCKER_CHROMIUM_USE_CONTEXT_PATH=${PWD}/example/docker process.env.DOCKER_CHROMIUM_USE_DOCKERFILE=Dockerfile process.env.JEST_PUPPETEER_CONFIG=example/jest-puppeteer.config.js jest panel.test.js -c example/jest.config.js",
         "lint": "eslint **/*.js --fix --ignore-pattern node_modules",
         "prettier": "prettier --write --single-quote --tab-width=4 */**.js",
         "precommit": "lint-staged"
@@ -44,7 +44,7 @@
         "puppeteer-extensions": "^1.0.2"
     },
     "dependencies": {
-        "docker-chromium": "git+https://github.com/bertuz/docker-chromium.git#specify-docker-image",
+        "docker-chromium": "github:bertuz/docker-chromium#specify-docker-build",
         "find-node-modules": "^2.0.0",
         "jest-puppeteer": "^4.4.0"
     }

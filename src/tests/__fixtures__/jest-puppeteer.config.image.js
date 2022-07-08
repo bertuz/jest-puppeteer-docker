@@ -1,9 +1,13 @@
 const getConfig = require('../../../lib/config');
+const path = require('path');
 
 const baseConfig = getConfig();
 const customConfig = Object.assign({}, baseConfig);
 
-customConfig.useImage = 'bertuz/docker-chromium:chromium103.0.5060.53';
+customConfig.useDockerBuild = {
+    dockerFile: 'Dockerfile',
+    contextPath: path.join(__dirname, 'dockerFiles')
+};
 
 customConfig.connect.defaultViewport = {
     width: 500,
