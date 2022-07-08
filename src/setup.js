@@ -31,7 +31,7 @@ if (!process.env.JEST_PUPPETEER_CONFIG) {
 }
 
 const {
-    useImage,
+    useDockerBuild,
     chromiumFlags,
     downloadHost,
     useClosestUbuntuMirror
@@ -48,7 +48,7 @@ module.exports = async jestConfig => {
 
     // set the version of Chromium to use based on Puppeteer
     await dockerSetChromiumConfig({
-        useImage,
+        useDockerBuild,
         revision,
         flags: chromiumFlags,
         downloadHost,
