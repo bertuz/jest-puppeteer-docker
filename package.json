@@ -44,7 +44,7 @@
         "puppeteer-extensions": "^1.0.2"
     },
     "dependencies": {
-        "docker-chromium": "github:bertuz/docker-chromium#specify-docker-build",
+        "docker-chromium": "github:bertuz/docker-chromium#explicit-platform",
         "find-node-modules": "^2.0.0",
         "jest-puppeteer": "^4.4.0"
     }
