@@ -1,5 +1,7 @@
 # jest-puppeteer-docker
 
+specify docker build 
+
 ![Tests](https://github.com/gidztech/jest-puppeteer-docker/workflows/Tests/badge.svg)
 **Jest preset plugin that allows you to run your tests against a Chromium instance running in Docker**
 
